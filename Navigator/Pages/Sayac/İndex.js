@@ -5,12 +5,11 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 
 
-
-export default class Home extends Component {
+export default class Sayac extends Component{
   render() {
     return (
       <View style={styles.container}>
-            <Text>home page</Text>
+       <Text>Sayac</Text>
       </View>
     );
   }
