@@ -7,9 +7,6 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import {
-  robotoWeights
-} from 'react-native-typography';
 
 import {withNavigation} from 'react-navigation';
 
@@ -60,37 +57,42 @@ export class HomeScreen extends Component {
           data={this.state.dataSource}
           renderItem={({ item }) =>
 
-          <View style={styles.container} >
-              <View style={styles.disKutu}>
+         
+              
 
 
                 <TouchableOpacity
-                    onPress={()=>{
+                  onPress={()=>{
                         this.props.navigation.navigate('Detail',
                         {
                         isim: item.titleOne,
                         arapca: item.titleTwo,
                         aciklama:item.aciklama,
                         })
-                  }}
-                
-
-                  
-                >
+                  }}>
+                   <View style={styles.container} >
                   <View style={styles.kutu} >
-                        
-                        <Text style={robotoWeights.ultraLight} > {item.titleNumber} </Text>
-                        <Text style={robotoWeights.ultraLight} > {item.titleOne} </Text>
-                        <Text style={robotoWeights.ultraLight} > {item.titleTwo} </Text>
-                  </View>
+                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                        <View>
+                          <Text style={styles.yazi} > {item.titleNumber} </Text>
+                        </View>
 
+                        <View>
+                         <Text style={styles.yazi} > {item.titleOne} </Text>
+                        </View>
+                        
+                        <View>
+                         <Text style={styles.yazi} > {item.titleTwo} </Text>
+                        </View>
+                    </View>
+                  </View>
+                </View>
                 </TouchableOpacity>
 
 
 
 
-              </View>
-          </View>
+     
 
           }
           keyExtractor={({ id }, index) => id}
@@ -101,23 +103,16 @@ export class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f5f5f5'
+  
+    backgroundColor: '#f5f5f5',
+    
   },
  
   kutu: {
-    flexDirection:'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    backgroundColor:'#fff',
-    margin:3,
-    borderRadius:20,
-    padding:10
+    margin:10
   },
   yazi:{
-    fontSize:20,
-    
-    
+    fontSize:16
   },
 
 });
