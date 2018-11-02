@@ -9,13 +9,12 @@ import {
 
 
 import {withNavigation} from 'react-navigation';
-import Detail from '../Navigator/Pages/Detail/İndex' 
-export class HomeScreen extends Component {
 
+export class HomeScreen extends Component {
 
     constructor(props){
      super(props)
-     console.log(props)
+     console.log('propslar',props)
      this.state = {
        datasource:[]
      }
@@ -52,6 +51,7 @@ export class HomeScreen extends Component {
 
 
     render() {
+
         return (
              <FlatList
           data={this.state.dataSource}
@@ -62,15 +62,20 @@ export class HomeScreen extends Component {
 
 
                 <TouchableOpacity
+
                   onPress={()=>{
-                        this.props.navigation.navigate('Detail')
+                        this.props.navigation.navigate('Detail',{itemId:item._id })
                   }}
+
+                  
                 >
                   <View style={styles.kutu} >
-                    <Text style={styles.yazi} > {item.titleNumber} </Text>
-                      <Text style={styles.yazi} > {item.titleOne} </Text>
+                        
+                        <Text style={styles.yazi} > {item.titleNumber} </Text>
+                        <Text style={styles.yazi} > {item.titleOne} </Text>
                         <Text style={styles.yazi} > {item.titleTwo} </Text>
                   </View>
+
                 </TouchableOpacity>
 
 

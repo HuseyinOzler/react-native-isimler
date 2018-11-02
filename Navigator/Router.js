@@ -8,9 +8,12 @@ import {
 import Home from './Pages/Home/index';
 import Sayac from './Pages/Sayac/İndex';
 import Detail from './Pages/Detail/İndex';
+import Detailpost from '../Components/DetailPost';
+import Postitem from '../Components/Postitem';
 
 const İsimler = createStackNavigator({Home:{screen:Home}})
 const Tesbih = createStackNavigator({Sayac:{screen:Sayac}})
+
 
 const TabBar = createBottomTabNavigator({
     İsimler,
@@ -29,5 +32,9 @@ const TabBar = createBottomTabNavigator({
 
 export default  createStackNavigator({
     TabBar:{screen:TabBar,navigationOptions:{header:null}},
-    Detail:{screen:Detail}
+    Detail:{screen:Detail},
+    Detailpost:{screen:Detailpost},
+    Postitem:{screen:Postitem}
+    
+   
 });
