@@ -10,17 +10,21 @@ import {
 
 
  class DetailPost extends Component{
+
+  
+
+
   render() {
     const { navigation } = this.props;
     const itemId = navigation.getParam('itemId');
+    const isim = navigation.getParam('isim')
     
     return (
       <View style={styles.container}>
           <View>
             <View style={styles.kutu} >
-            
-               
-                <Text>itemId: {JSON.stringify(itemId)}</Text>
+                <Text>{itemId}</Text>
+                <Text> {isim} </Text>
                   <Text>asdasd</Text>
                   <Text>asdasd</Text>
             </View>

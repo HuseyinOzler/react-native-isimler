@@ -64,7 +64,7 @@ export class HomeScreen extends Component {
                 <TouchableOpacity
 
                   onPress={()=>{
-                        this.props.navigation.navigate('Detail',{itemId:item._id })
+                        this.props.navigation.navigate('Detail',{itemId:item.aciklama,isim:item.titleOne})
                   }}
 
                   
