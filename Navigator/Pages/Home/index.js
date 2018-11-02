@@ -1,16 +1,14 @@
 
-
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-
-
+import Postitem from '../../../Components/Postitem';
 
 
 export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-            <Text>home page</Text>
+            <Postitem/>
       </View>
     );
   }

@@ -8,12 +8,12 @@ import {
 import Home from './Pages/Home/index';
 import Sayac from './Pages/Sayac/İndex';
 
-const HomeBar = createStackNavigator({Home:{screen:Home}})
-const SayacBar = createStackNavigator({Sayac:{screen:Sayac}})
+const İsimler = createStackNavigator({Home:{screen:Home}})
+const Tesbih = createStackNavigator({Sayac:{screen:Sayac}})
 
 const TabBar = createBottomTabNavigator({
-    HomeBar,
-    SayacBar
+    İsimler,
+    Tesbih
 });
 
 export default  createStackNavigator({
