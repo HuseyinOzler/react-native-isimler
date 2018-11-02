@@ -5,6 +5,18 @@ import Postitem from '../../../Components/Postitem';
 
 
 export default class Home extends Component {
+
+   static navigationOptions = {
+     title: 'Esmaül Hüsna',
+     headerStyle: {
+       backgroundColor: '#5CB3C7',
+     },
+     headerTintColor: '#fff',
+     headerTitleStyle: {
+       fontWeight: 'bold',
+     },
+   };
+   
   render() {
     return (
       <View style={styles.container}>
