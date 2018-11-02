@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     backgroundColor:'#fff',
     margin:3,
     borderRadius:20,
-    padding:10
+    padding:20
   },
   yazi:{
     fontSize:20,
