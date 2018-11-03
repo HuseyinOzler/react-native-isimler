@@ -55,7 +55,7 @@ static navigationOptions = {
                   </View>
                 
                   <View style={{justifyContent:'space-between',margin:5}}>
-                      <View style={{marginBottom:5}}><Text style={styles.baslik1}>Aciklama:</Text></View>
+                      <View style={{marginBottom:5}}><Text style={styles.baslik1}>Anlamı:</Text></View>
                       <View><Text style={styles.yazi}>{aciklama}</Text></View>
                   </View>
                 
