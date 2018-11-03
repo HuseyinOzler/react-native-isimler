@@ -19,7 +19,7 @@ export default class DetailScreen extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#f5f5f5',
   },
  
 
