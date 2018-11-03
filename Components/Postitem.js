@@ -58,7 +58,7 @@ export class HomeScreen extends Component {
         this.setState({
           showMe:false
         })
-      }, 3000);
+      }, 1000);
   }
 
 
@@ -97,9 +97,9 @@ export class HomeScreen extends Component {
                   
                   <View style={styles.kutu} >
                         
-                        <Text style={robotoWeights.ultraLight} >{item.titleNumber} </Text>
-                        <Text style={robotoWeights.ultraLight} >{item.titleOne} </Text>
-                        <Text style={robotoWeights.ultraLight} >{item.titleTwo} </Text>
+                        <Text style={robotoWeights.ultraLight,{color:'#352f42'}} >{item.titleNumber} </Text>
+                        <Text style={robotoWeights.ultraLight,{color:'#352f42'}} >{item.titleOne} </Text>
+                        <Text style={robotoWeights.bold,{color:'#352f42'}} >{item.titleTwo} </Text>
                   </View>
 
                 </TouchableOpacity>

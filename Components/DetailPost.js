@@ -5,7 +5,8 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
+  Button
 } from 'react-native';
 import {
   StackNavigator
@@ -52,6 +53,18 @@ static navigationOptions = {
                   <View style={styles.ynn}>
                       <View><Text style={styles.baslik1}>Arapca:</Text></View>
                       <View><Text style={styles.yazi}>{arapca}</Text></View>
+                  </View>
+
+                  <View style={styles.ynn}>
+                      <View>
+                      <Button
+                      
+                      onPress={console.log('hello')}
+                      title="Zikret"
+                      color = "#1094F6"
+                      accessibilityLabel="Learn more about this purple button"
+                    />
+                    </View>
                   </View>
                 
                   <View style={{justifyContent:'space-between',margin:5}}>
