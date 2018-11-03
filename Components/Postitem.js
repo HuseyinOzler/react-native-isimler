@@ -41,14 +41,11 @@ export class HomeScreen extends Component {
      return fetch('https://hsyn-api.herokuapp.com/api/text/list')
       .then((response) => response.json())
       .then((responseJson) => {
-
         this.setState({
           isLoading: false,
           dataSource: responseJson.bsk,
         }, function(){
-
         });
-
       })
       .catch((error) =>{
         console.error(error);
@@ -71,7 +68,9 @@ export class HomeScreen extends Component {
       <View>
       {
         this.state.showMe ? 
-        <ActivityIndicator size="large" color="#0000ff"/>
+        <View style={{justifyContent: 'center',marginTop:'50%'}}>
+        <ActivityIndicator size="large" color="#0000ff" style={{justifyContent:'center'}} />
+        </View>
         :
                <FlatList
           keyExtractor={({ _id }, x) => _id}
