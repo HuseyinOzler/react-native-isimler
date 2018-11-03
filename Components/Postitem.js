@@ -4,7 +4,8 @@ import {
     Text,
     StyleSheet,
     FlatList,
-    TouchableOpacity
+    TouchableOpacity,
+    ActivityIndicator
 } from 'react-native';
 
 import {
@@ -19,8 +20,10 @@ export class HomeScreen extends Component {
      super(props)
      console.log('propslar',props)
      this.state = {
+       showMe: true,
        datasource:[]
      }
+     
    }
 
    renderItem = ({item}) => {
@@ -53,14 +56,30 @@ export class HomeScreen extends Component {
   }
 
 
+  componentWillMount(){
+      setTimeout(() => {
+        this.setState({
+          showMe:false
+        })
+      }, 3000);
+  }
+
+
     render() {
 
         return (
-             <FlatList
+      <View>
+      {
+        this.state.showMe ? 
+        <ActivityIndicator size="large" color="#0000ff"/>
+        :
+               <FlatList
+             
           data={this.state.dataSource}
           renderItem={({ item }) =>
-
+          
           <View style={styles.container} >
+         
               <View style={styles.disKutu}>
 
 
@@ -72,11 +91,11 @@ export class HomeScreen extends Component {
                         arapca: item.titleTwo,
                         aciklama:item.aciklama,
                         })
-                  }}
+                  }}>
                 
 
                   
-                >
+                  
                   <View style={styles.kutu} >
                         
                         <Text style={robotoWeights.ultraLight} > {item.titleNumber} </Text>
@@ -95,6 +114,10 @@ export class HomeScreen extends Component {
           }
           keyExtractor={({ id }, index) => id}
         />
+      }
+      
+      
+        </View>
         );
     }
 }
