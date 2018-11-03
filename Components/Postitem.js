@@ -74,7 +74,7 @@ export class HomeScreen extends Component {
         <ActivityIndicator size="large" color="#0000ff"/>
         :
                <FlatList
-             
+          keyExtractor={({ _id }, x) => _id}
           data={this.state.dataSource}
           renderItem={({ item }) =>
           
@@ -98,9 +98,9 @@ export class HomeScreen extends Component {
                   
                   <View style={styles.kutu} >
                         
-                        <Text style={robotoWeights.ultraLight} > {item.titleNumber} </Text>
-                        <Text style={robotoWeights.ultraLight} > {item.titleOne} </Text>
-                        <Text style={robotoWeights.ultraLight} > {item.titleTwo} </Text>
+                        <Text style={robotoWeights.ultraLight} >{item.titleNumber} </Text>
+                        <Text style={robotoWeights.ultraLight} >{item.titleOne} </Text>
+                        <Text style={robotoWeights.ultraLight} >{item.titleTwo} </Text>
                   </View>
 
                 </TouchableOpacity>
@@ -112,7 +112,7 @@ export class HomeScreen extends Component {
           </View>
 
           }
-          keyExtractor={({ id }, index) => id}
+         
         />
       }
       
