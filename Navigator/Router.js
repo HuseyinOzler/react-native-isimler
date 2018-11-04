@@ -56,7 +56,8 @@ export default  createStackNavigator({
     TabBar:{screen:TabBar,navigationOptions:{header:null}},
     Detail:{screen:Detail},
     Detailpost:{screen:Detailpost},
-    Postitem:{screen:Postitem}
+    Postitem:{screen:Postitem},
+    Sayac:{screen:Sayac}
     
    
 });

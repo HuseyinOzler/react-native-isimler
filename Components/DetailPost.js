@@ -67,7 +67,7 @@ static navigationOptions = {
                       <View>
                       <TouchableOpacity 
                       onPress={()=>{
-                        console.log('Zikret Sayfası Aktif edildi')
+                        this.props.navigation.navigate('Sayac')
                       }}>
                      
                         <View style={styles.button}>

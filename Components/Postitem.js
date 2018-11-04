@@ -42,7 +42,7 @@ export class HomeScreen extends Component {
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
-          isLoading: false,
+          showMe: false,
           dataSource: responseJson.bsk,
         }, function(){
         });
@@ -53,13 +53,7 @@ export class HomeScreen extends Component {
   }
 
 
-  componentWillMount(){
-      setTimeout(() => {
-        this.setState({
-          showMe:false
-        })
-      }, 1000);
-  }
+
 
 
     render() {
