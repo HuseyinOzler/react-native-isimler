@@ -6,7 +6,8 @@ import {
   Text,
   View,
   ScrollView,
-  Button
+  Button,
+  TouchableOpacity
 } from 'react-native';
 import {
   StackNavigator
@@ -14,6 +15,9 @@ import {
 import {
   withNavigation
 } from 'react-navigation';
+import {
+  robotoWeights
+} from 'react-native-typography';
 
 
  class DetailPost extends Component{
@@ -35,6 +39,10 @@ static navigationOptions = {
     const isim = navigation.getParam('isim');
     const arapca = navigation.getParam('arapca');
     const aciklama = navigation.getParam('aciklama');
+    const aciklama2 = navigation.getParam('aciklama2');
+    const aciklama3 = navigation.getParam('aciklama3');
+
+    
     
     
     
@@ -57,13 +65,15 @@ static navigationOptions = {
 
                   <View style={styles.ynn}>
                       <View>
-                      <Button
-                      
-                      onPress={console.log('hello')}
-                      title="Zikret"
-                      color = "#1094F6"
-                      accessibilityLabel="Learn more about this purple button"
-                    />
+                      <TouchableOpacity 
+                      onPress={()=>{
+                        console.log('Zikret Sayfası Aktif edildi')
+                      }}>
+                     
+                        <View style={styles.button}>
+                          <Text style={{color:'#fff',fontSize:15}}>Zikret</Text>
+                        </View>
+                      </TouchableOpacity>
                     </View>
                   </View>
                 
@@ -71,6 +81,19 @@ static navigationOptions = {
                       <View style={{marginBottom:5}}><Text style={styles.baslik1}>Anlamı:</Text></View>
                       <View><Text style={styles.yazi}>{aciklama}</Text></View>
                   </View>
+
+                  <View style={{justifyContent:'space-between',margin:5}}>
+                      
+                      <View><Text style={styles.yazi}>{aciklama2}</Text></View>
+                  </View>
+
+
+                  <View style={{justifyContent:'space-between',margin:5}}>
+                     
+                      <View><Text style={styles.yazi}>{aciklama3}</Text></View>
+                  </View>
+
+                 
                 
               </View>
                 
@@ -107,9 +130,17 @@ const styles = StyleSheet.create({
     margin:5
   },
   baslik1:{
-    fontSize:14,
+    fontSize:15,
     fontFamily:'alnile'
 
+  },
+  button:{
+    borderWidth:1,
+    borderColor:'#841584',
+    fontSize:20,
+    borderRadius:2,
+    padding:10,
+    backgroundColor:'#841584'
   }
 
 });

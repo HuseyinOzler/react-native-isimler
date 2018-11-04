@@ -89,6 +89,9 @@ export class HomeScreen extends Component {
                         isim: item.titleOne,
                         arapca: item.titleTwo,
                         aciklama:item.aciklama,
+                        aciklama2:item.aciklama2,
+                        aciklama3:item.aciklama3,
+                      
                         })
                   }}>
                 
