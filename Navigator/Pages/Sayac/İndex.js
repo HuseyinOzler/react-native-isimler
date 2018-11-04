@@ -7,9 +7,12 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 export default class Sayac extends Component{
   render() {
+    const { navigation } = this.props;
+    const isim = navigation.getParam('isim');
     return (
       <View style={styles.container}>
        <Text>Sayac</Text>
+       <Text> {isim} </Text>
       </View>
     );
   }

@@ -67,11 +67,15 @@ static navigationOptions = {
                       <View>
                       <TouchableOpacity 
                       onPress={()=>{
-                        this.props.navigation.navigate('Sayac')
+                        this.props.navigation.navigate('Sayac',{
+                          isim
+                        })
                       }}>
                      
                         <View style={styles.button}>
-                          <Text style={{color:'#fff',fontSize:15}}>Zikret</Text>
+                          
+                            <Text style={{color:'#fff',fontSize:17}}>Zikret</Text>
+                         
                         </View>
                       </TouchableOpacity>
                     </View>
@@ -140,7 +144,8 @@ const styles = StyleSheet.create({
     fontSize:20,
     borderRadius:2,
     padding:10,
-    backgroundColor:'#841584'
+    backgroundColor:'#841584',
+    
   }
 
 });
